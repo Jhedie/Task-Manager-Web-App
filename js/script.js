@@ -168,7 +168,7 @@ function loginUser(event) {
         return u.username == name && u.password == pass;
       })[0];
       localStorage.setItem("name", current_user.username);
-      window.location.pathname = "/home.html";
+      window.location.pathname = "./home.html";
       alert("Login Successful");
     } else {
       alert("Login Failed");
