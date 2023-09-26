@@ -1,0 +1,1087 @@
+@media screen {
+
+    /* Leading rule */
+    html {
+      -webkit-filter: invert(100%) hue-rotate(180deg) contrast(85%) !important;
+      filter: invert(100%) hue-rotate(180deg) contrast(85%) !important;
+    }
+    
+    /* Reverse rule */
+    img,
+    video,
+    :not(object):not(body)>embed,
+    object,
+    svg image,
+    [style*="background:url"],
+    [style*="background-image:url"],
+    [style*="background: url"],
+    [style*="background-image: url"],
+    [background],
+    twitterwidget,
+    .sr-reader,
+    .sr-backdrop {
+      -webkit-filter: invert(100%) hue-rotate(180deg) !important;
+      filter: invert(100%) hue-rotate(180deg) !important;
+    }
+    [style*="background:url"] *,
+    [style*="background-image:url"] *,
+    [style*="background: url"] *,
+    [style*="background-image: url"] *,
+    input,
+    [background] *,
+    img[src^="https://s0.wp.com/latex.php"],
+    twitterwidget .NaturalImage-image {
+      -webkit-filter: none !important;
+      filter: none !important;
+    }
+    .compatibility-with-darkreader-below-4-3-3 {
+      background: white !important;
+    }
+    
+    /* Text contrast */
+    html {
+      text-shadow: 0 0 0 !important;
+    }
+    
+    /* Full screen */
+    :-webkit-full-screen, :-webkit-full-screen * {
+      -webkit-filter: none !important;
+      filter: none !important;
+    }
+    :-moz-full-screen, :-moz-full-screen * {
+      -webkit-filter: none !important;
+      filter: none !important;
+    }
+    :fullscreen, :fullscreen * {
+      -webkit-filter: none !important;
+      filter: none !important;
+    }
+    
+    /* Page background */
+    html {
+      background: rgb(255,255,255) !important;
+    }
+    
+    /* Custom rules */
+    .compatibility-with-darkreader-below-4-3-3 {
+        background: white !important;
+    }
+    
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --work-label: #f7ecdd;
+    --personal-label: #84cdca;
+    --school-label: #fccae5;
+    --business-label: #f8d8b2;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bs-light);
+  }
+  
+  /** Login and Register page **/
+  .formcontainer {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .signUp-login {
+    width: 50rem;
+    height: 25rem;
+    display: flex;
+    border: 1px solid rgb(189, 176, 176);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    background-color: white;
+  }
+  
+  .formcontainer .tab-content {
+    height: 22rem;
+  }
+  
+  .login-signuptabs .nav-item {
+    width: 50%;
+  }
+  .login-signuptabs .nav-item .nav-link {
+    width: 100%;
+  }
+  
+  .tab-pane .signup .createuserbutton {
+    width: 100%;
+  }
+  
+  .tab-content .tab-pane .login .loginbutton {
+    width: 100%;
+  }
+  
+  /*** Navigation side bar ***/
+  .sidenav-maincontent {
+    height: 100vh;
+  }
+  
+  .sidenav {
+    height: 100%;
+    background-color: var(--bs-secondary);
+  }
+  
+  .logonavlinks-profile {
+    height: 100%;
+  }
+  .logo-nav-links {
+    height: 85%;
+  }
+  .brand-icon {
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--bs-primary);
+  }
+  .menu {
+    height: 30rem;
+  }
+  .menu .nav {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+  
+  .menu .nav-item {
+    width: 100%;
+  }
+  
+  .menu .nav-item a span {
+    margin: 0.2rem;
+  }
+  .menu .nav-item a i {
+    margin-left: 4rem;
+  }
+  
+  .menu .nav-link {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    font-weight: 300;
+  }
+  
+  .menu .nav-link i {
+    margin-right: 1rem;
+    font-weight: 200;
+  }
+  
+  .profile {
+    height: 10%;
+  }
+  .profile button {
+    background-color: var(--bs-light);
+    color: var(--bs-primary);
+  }
+  .profile-icon {
+    font-size: 2rem;
+    margin-right: 2rem;
+  }
+  
+  .profile-name {
+    font-size: 1.5rem;
+    margin-right: 2rem;
+  }
+  
+  /*** The Home page CSS  ***/
+  
+  .main-content {
+    height: 100%;
+  }
+  .main-content .content {
+    height: 100%;
+    padding: 2rem;
+  }
+  
+  .searchbar-notificationbell {
+    padding: 0;
+    margin: 0;
+  }
+  .searchbar-notificationbell .searchbar {
+    width: 50%;
+    margin-right: 0.3rem;
+  }
+  .searchbar-notificationbell .notificationbell {
+    width: 5%;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    color: var(--bs-primary);
+  }
+  .searchbar-notificationbell .acessibility-icon {
+    width: 5%;
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    color: var(--bs-primary);
+  }
+  .greeting {
+    padding: 0;
+    margin: 0;
+    color: var(--bs-primary);
+  }
+  
+  .tasks-weatherandsummary {
+    padding: 1rem;
+    margin: 0rem;
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    border-radius: 5px;
+  }
+  .tasks-weatherandsummary .tasks {
+    height: 100%;
+  }
+  
+  .tasks .today-showalltasks .today {
+    display: flex;
+    justify-content: start;
+  }
+  
+  .tasks .today-showalltasks h2 {
+    font-weight: 300;
+    color: var(--bs-primary);
+  }
+  .tasks .today-showalltasks .showalltasks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+  }
+  
+  .todoInprogressCompleted {
+    margin: 0;
+    padding: 0;
+  }
+  .todoInprogressCompleted .nav-item {
+    width: 50%;
+    padding: 0;
+  }
+  .todoInprogressCompleted .nav-link {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .todoInprogressCompleted .nav-link span {
+    color: black;
+  }
+  
+  .taskpane .tab-content {
+    margin-top: 1rem;
+    height: 50vh;
+    overflow: auto;
+  }
+  
+  .taskpane .tab-content .card {
+    margin-top: 0.6rem;
+    border-radius: 5px;
+  }
+  .taskpane .tab-content .card .card-body {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .taskpane
+    .tab-content
+    .card
+    .card-body
+    .cardtaskhead-cardtaskduedatelabel
+    .cardtaskhead {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  .taskpane
+    .tab-content
+    .card
+    .card-body
+    .cardtaskhead-cardtaskduedatelabel
+    .cardtaskduedate-label {
+    display: flex;
+    padding: 0.2rem;
+    align-items: center;
+  }
+  .taskpane
+    .tab-content
+    .card
+    .card-body
+    .cardtaskhead-cardtaskduedatelabel
+    .cardtaskduedate-label
+    .cardtaskduedate {
+    margin-right: 1.5rem;
+    font-weight: 200;
+    font-size: 0.8rem;
+  }
+  .taskpane
+    .tab-content
+    .card
+    .card-body
+    .cardtaskhead-cardtaskduedatelabel
+    .cardtaskduedate-label
+    .cardtasklabel {
+    padding: 0.1rem 0.4rem;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 0.8rem;
+  }
+  .worklabelexample {
+    background-color: var(--work-label);
+  }
+  .personallabelxample {
+    background-color: var(--personal-label);
+  }
+  
+  .schoollabelexample {
+    background-color: var(--school-label);
+  }
+  .businesslabelexample {
+    background-color: var(--business-label);
+  }
+  
+  .taskitem .taskicon {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 1rem;
+  }
+  
+  .tasks-weatherandsummary .weatherandsummary {
+    height: 100%;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .weatherandsummary .weather {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    margin-top: 2.6rem;
+    border-radius: 5px;
+    background-color: rgb(231, 228, 228, 0.1);
+  }
+  
+  .weathername-weathericon-temperature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .weathername-weathericon-temperature .weathername {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  .weathername-weathericon-temperature .weathericon i {
+    font-size: 2.5rem;
+  }
+  .weathername-weathericon-temperature .temperature {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  .summary {
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    height: 40vh;
+    background-color: rgb(231, 228, 228, 0.1);
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 5px;
+  }
+  .summary .todayssummaryheading {
+    text-align: center;
+    padding: 0.5rem;
+    height: fit-content;
+    font-weight: 300;
+  }
+  
+  .summary .statcircle-count-name {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 7rem;
+    width: 5rem;
+    background-color: white;
+    margin: 1rem;
+    border-radius: 45%;
+    font-weight: 400;
+  }
+  
+  .summary .circle-center {
+    border: 0.2rem solid rgb(128, 128, 128, 0.3);
+  }
+  
+  .createtaskbutton {
+    padding: 0;
+    margin: 0;
+    height: 2.5rem;
+    margin-top: 1rem;
+  }
+  
+  .createtaskbutton button {
+    padding: 0;
+    margin: 0;
+  }
+  
+  /*** The Task page CSS  ***/
+  .alltasks .taskicon {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+  .alltasks .nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  .alltasks .nav-item {
+    width: 49%;
+    margin: 0;
+  }
+  .alltasks .nav-item .nav-link {
+    width: 100%;
+    background-color: var(--bs-secondary);
+  }
+  
+  .alltasks .nav-item .nav-link.active {
+    background-color: var(--bs-primary);
+  }
+  
+  .alltasks .tab-content {
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  
+  .filtericonfilterlabel-task-filters {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  .filtericonfilterlabel-task-filters .filtericon-filterlabel {
+    display: flex;
+    align-items: center;
+  
+    padding: 0 0.5rem;
+    border-radius: 0.2rem;
+    border: 1px solid rgb(74, 70, 70, 0.2);
+  }
+  
+  .filtericonfilterlabel-task-filters .filtericon-filterlabel .filtericon i {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: var(--bs-primary);
+  }
+  
+  .filtericonfilterlabel-task-filters .filtericon-filterlabel .filterlabel span {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    color: var(--bs-primary);
+  }
+  
+  .filtericonfilterlabel-task-filters .task-filters label {
+    margin: 0 0.6rem;
+    padding: 0 0.2rem;
+  }
+  
+  .taskmodal .modal-content {
+    height: 65%;
+    padding: 1rem;
+  }
+  .taskmodal
+    .modal-body
+    .tasktitle-startend-tasklabel
+    .tasktitle-startend
+    .tasktitle {
+    font-weight: normal;
+  }
+  
+  /* includes the start and end date divs */
+  .taskmodal
+    .modal-body
+    .tasktitle-startend-tasklabel
+    .tasktitle-startend
+    .startDate-endDate {
+    margin-top: 1rem;
+  }
+  /* --- */
+  
+  /* start date div */
+  .taskmodal
+    .modal-body
+    .tasktitle-startend-tasklabel
+    .tasktitle-startend
+    .startDate-endDate
+    .startdate-time {
+    margin: 0;
+    padding: 0;
+    margin-right: 1rem;
+  }
+  .taskmodal
+    .modal-body
+    .tasktitle-startend-tasklabel
+    .tasktitle-startend
+    .startDate-endDate
+    .startdate-time
+    span {
+    font-weight: 500;
+  }
+  
+  /* end date div */
+  .taskmodal
+    .modal-body
+    .tasktitle-startend-tasklabel
+    .tasktitle-startend
+    .startDate-endDate
+    .enddate-time {
+    margin: 0;
+    padding: 0;
+  }
+  .taskmodal
+    .modal-body
+    .tasktitle-startend-tasklabel
+    .tasktitle-startend
+    .startDate-endDate
+    .enddate-time
+    span {
+    font-weight: 500;
+  }
+  /* modal description section */
+  .taskmodal .modal-body .modaltaskdescription {
+    margin-top: 2rem;
+    font-weight: normal;
+  }
+  .taskmodal .modal-body .modaltaskdescription textarea {
+    height: 7rem;
+  }
+  
+  /* modal label radio buttons */
+  .modal-body .tasktitle-startend-tasklabel .tasklabel {
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    width: 7.5rem;
+    margin-left: 1rem;
+    border-radius: 0.2rem;
+    font-weight: normal;
+  }
+  .modal-body .tasktitle-startend-tasklabel .tasklabel .label-heading {
+    padding: 0.2rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  /* modal footer */
+  .modal-content .modal-footer {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-content .modal-footer .closetaskmodalbutton {
+    width: 49%;
+    height: 100%;
+    padding: 0.5rem;
+    margin-right: 0.2;
+  }
+  
+  .modal-content .modal-footer .savetaskmodalbutton {
+    width: 49%;
+    height: 100%;
+    padding: 0.5rem;
+  }
+  
+  /* card design */
+  .alltasks .taskitem {
+    height: 55vh;
+    overflow: auto;
+  }
+  
+  .alltasks .taskitem .card {
+    margin-top: 0.5rem;
+    height: 10rem;
+  }
+  
+  .alltasks .taskitem .card .taskname-taskbuttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .alltasks .taskitem .card .taskname-taskbuttons .taskbuttons button {
+    margin-right: 0.2rem;
+  }
+  .alltasks .taskitem .card .taskname-taskbuttons .taskname {
+    margin-top: 0.5rem;
+  }
+  
+  .alltasks .taskitem .card .duedate-description-statusvalue {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .alltasks .taskitem .card .duedate-description-statusvalue .taskdescription {
+    width: 60%;
+    padding: 1rem;
+    margin-right: 1rem;
+  }
+  .alltasks .taskitem .card .duedate-description-statusvalue .duedate {
+    padding: 1rem;
+    margin-right: 1rem;
+  }
+  .alltasks
+    .taskitem
+    .card
+    .duedate-description-statusvalue
+    .taskstatus-statusvalue {
+    padding: 1rem;
+  }
+  /* Expand task modal */
+  
+  .expandtaskmodal .modal-content {
+    height: 63vh;
+  }
+  
+  .expandtaskmodal .modal-content .modal-header .expand-modal-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .expandtaskmodal .modal-content .modal-header .expand-modal-buttons button {
+    margin-right: 1rem;
+  }
+  
+  .exdescription-exduration-exlabelstatus-countdown .exdescription {
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  .exdescription-exduration-exlabelstatus-countdown .exduration {
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    margin-top: 1rem;
+    padding: 0.8rem;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .exdescription-exduration-exlabelstatus-countdown .exlabel-status {
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  .exdescription-exduration-exlabelstatus-countdown .exlabel-status .exlabel {
+    display: flex;
+    align-items: center;
+  }
+  .exdescription-exduration-exlabelstatus-countdown
+    .exlabel-status
+    .exlabel
+    strong {
+    margin-right: 1rem;
+  }
+  .exdescription-exduration-exlabelstatus-countdown .exlabel-status .labelbadge {
+    background-color: var(--work-label);
+    height: 1rem;
+    width: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .exdescription-exduration-exlabelstatus-countdown .toendcountdown {
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .exdescription-exduration-exlabelstatus-countdown .toendcountdown .count {
+    margin-top: 1rem;
+  }
+  /* End of expand task modal */
+  
+  /* End of tasks page  */
+  /****** Statistics page ********/
+  
+  .taskreporttittle-notificationbell {
+    display: flex;
+    height: 7vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .taskreporttittle-notificationbell .stats-notification-accessibility {
+      display: flex;
+      align-items: center;
+  
+  }
+  
+  .taskreporttittle-notificationbell .stats-notification-accessibility .notificationbell {
+      font-size: 1.5rem;
+      padding: 0;
+      margin: 0;
+      margin-right:1rem;
+      color: var(--bs-primary);
+  }
+  
+  .taskreporttittle-notificationbell .stats-notification-accessibility .acessibility-icon {
+      font-size: 1.5rem;
+      padding: 0;
+      margin: 0;
+      color: var(--bs-primary);
+  }
+  
+  
+  .chartsection .calendarbox-timefilter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .chartsection .calendarbox-timefilter .calendarbox {
+    display: flex;
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    padding: 0.5rem;
+  }
+  .chartsection .calendarbox-timefilter .calendarbox .arrowleft {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+  }
+  .chartsection .calendarbox-timefilter .calendarbox .calendaricon-currentday {
+    display: flex;
+    margin-right: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .chartsection
+    .calendarbox-timefilter
+    .calendarbox
+    .calendaricon-currentday
+    .calendaricon {
+    margin-right: 0.5rem;
+  }
+  .chartsection .calendarbox-timefilter .calendarbox .arrowright {
+    font-size: 1.4rem;
+  }
+  
+  .chartsection .calendarbox-timefilter .timefilter {
+    height: 60%;
+  }
+  
+  .chartsection .chart {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    height: 100%;
+  }
+  
+  .chartsection-createtaskbutton {
+    margin: 0;
+    padding: 0;
+  }
+  .chartsection-createtaskbutton .chartsection {
+    border: 1px solid rgb(74, 70, 70, 0.2);
+    padding: 1rem;
+  }
+  
+  /* Endof stats page */
+  
+  /*** The calendar page CSS  ***/
+  .cal-container {
+    margin-top: 4rem;
+  }
+  
+  .calendardescription-notificationbellAccessibilityicon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  .calendardescription-notificationbellAccessibilityicon
+    .notificationbell-Accessibilityicon {
+    display: flex;
+    justify-content: end;
+  }
+  .calendardescription-notificationbellAccessibilityicon
+    .notificationbell-Accessibilityicon
+    .notificationbell {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    color: var(--bs-primary);
+    margin-right: 1rem;
+  }
+  
+  .calendardescription-notificationbellAccessibilityicon
+    .notificationbell-Accessibilityicon
+    .acessibility-icon {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+    color: var(--bs-primary);
+  }
+  
+  .calendarsection-createtaskbutton {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .calendarsection-createtaskbutton .calendarsection {
+    height: 75vh;
+  }
+  
+  /* End of Calendar page */
+  
+  /* The switch - the box around the slider */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  .settingsModal .modal-content {
+    padding: 1rem;
+    height: 40vh;
+  }
+  
+  /* .settingsModal .modal-content .modal-body .darkmode { 
+      display:flex; 
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  .settingsModal .modal-content .modal-body .darkmode span {
+      font-weight: 400;
+  } */
+  
+  .settingsModal .modal-content .modal-body .fontsize {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+  .settingsModal .modal-content .modal-body .fontsize span {
+    font-weight: 400;
+  }
+  
+  .settingsModal .modal-content .modal-footer {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+  }
+  
+  .settingsModal .modal-content .modal-footer button {
+    width: 48%;
+  }
+  
+  
+  .theme-container .theme-swtich-container .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  .theme-container .theme-swtich-container .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .theme-container .theme-swtich-container .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .theme-container .theme-swtich-container .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .theme-container .theme-swtich-container input:checked + .slider {
+    background-color: #2196f3;
+  }
+  .theme-container .theme-swtich-container input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+  }
+  .theme-container .theme-swtich-container input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  .theme-container .theme-swtich-container .slider.round {
+    border-radius: 34px;
+  }
+  .theme-container .theme-swtich-container .slider.round:before {
+    border-radius: 50%;
+  }
+  .theme-container .theme-swtich-container .switch .uncheked-txt {
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    width: 100%;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: var(--bs-dark);
+  
+    /* font-weight transition */
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .theme-container .theme-swtich-container input:checked ~ .checked-txt {
+    font-weight: 600;
+  }
+  .theme-container .theme-swtich-container input:checked ~ .uncheked-txt {
+    font-weight: 300 !important;
+  }
+  
+  .theme-container .theme-swtich-container .switch .checked-txt {
+    position: absolute;
+    top: 50%;
+    right: -80%;
+    font-weight: 300;
+    transform: translateY(-50%);
+    color: var(--bs-dark);
+  
+    /* font-weight transition */
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .theme-container {
+    margin-right: 2.5rem !important;
+  }
+  
+  
+  /* .col.tasktitle-startend .row.form-floating.tasktitle label:before{
+      content: '*';
+      position: absolute;
+      top: -5%;
+      /* transform: translateY(20%); */
+  /* left: 28%;
+      color: red;
+      width: fit-content;
+      display: block;
+  }
+  
+  .row.startDate-endDate label{
+      position: relative;
+  
+  }
+  .row.startDate-endDate label.required:before{
+      content: '*';
+      position: absolute;
+      top: -30%; */
+  /* transform: translateY(20%); */
+  /* left: 100%;
+      height: 100%;
+      color: red;
+      display: block;
+  }
+  label.required:before{
+      content: '*';
+      position: absolute;
+      top: 0;
+      transform: translateY(20%);
+      left: 90%;
+      height: 100%;
+      width: 100%;
+      color: red;
+  } */
+  
+  /* Setting Modal code */
+  

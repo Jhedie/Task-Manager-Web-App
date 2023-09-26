@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <!--Custom bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--Fa fa icons-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--Stylesheet-->
+    <link href="css/stylesheet.css" rel="stylesheet" />
+    
+
+    <link href="" rel="stylesheet" id="pagetheme"/>
+
+    <title>Tasks</title>
+</head>
+
+<body class="accessibility-plugin-ac">
+    <div class="container-fluid taskspagecontainer">
+        <!--contains the sidenav and main-content -->
+        <div class="row sidenav-maincontent">
+            <!--section for nav bar-->
+            <nav class="col-3 sidenav">
+                <div class="row  logonavlinks-profile">
+                    <div class="logo-nav-links">
+                        <!--ICON-->
+                        <div class="navbar-brand brand-icon">T.M</div>
+                        <!--Nav bar -->
+                        <div class="menu d-flex align-content-between">
+                            <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="home.html">
+                                        <i class="fa fa-home" aria-hidden="true"></i>
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="tasks.html">
+                                        <i class="fa fa-tasks" aria-hidden="true"></i>
+                                        <span>Tasks</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="statistics.html">
+                                        <i class="bi bi-graph-up-arrow" aria-hidden="true"></i>
+                                        <span>Statistics</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="calendar.html">
+                                        <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        <span>Calendar</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--User profile-->
+                    <div class="btn-group dropend profile">
+                        <button type="button" class="btn btn-primary dropdown-toggle profile-button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="fa fa-user profile-icon"></div>
+                            <span class="profile-name">Profile</span>
+                        </button>
+                        <!-- Drop down menu for profile -->
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Settings</a>
+                            <a class="dropdown-item" href="#">Profile</a>
+                            <hr class="dropdown-divider" />
+                            <a class="dropdown-item" href="#" onclick="Logout()">Log out</a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!--Main body-->
+            <div class="col-9 main-content">
+                <div class="row content">
+                    <!-- the search bar container -->
+                    <div class="row d-flex align-items-center justify-content-end searchbar-notificationbell">
+                        <!--search bar-->
+                        <div class="input-group searchbar">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="search"
+                                aria-describedby="basic-addon2" />
+                            <div classz="input-group-append">
+                                <button class="btn btn-outline-primary" type="button">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!--Notification button-->
+                        <div class="notificationbell">
+                            <i class="bi bi-bell-fill"></i>
+                        </div>
+                        <div class="acessibility-icon">
+                            <i class="fa fa-universal-access fa-fw" aria-hidden="true" onclick="viewAccessibility();"></i>
+                        </div>
+                    </div>
+                    <!--task tabs for navigating all tasks, to do and completed-->
+                    <div class="row alltasks ">
+                        <ul class="nav nav-pills" id="pills-tab" role="tablist">
+
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active border" id="pills-todo-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-todo" type="button" role="tab" aria-controls="pills-todo"
+                                    aria-selected="true">
+                                    <img src="img/pending_icon_216666.png" alt="pending icon" class="taskicon">
+                                    <span>To do</span>
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link border" id="pills-completed-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-completed" type="button" role="tab"
+                                    aria-controls="pills-completed" aria-selected="false">
+                                    <img src="img/circle_tick_icon_213329.png" alt="circle tick icon" class="taskicon">
+                                    <span>Completed</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <!--checkbox filter section-->
+                        <div class="filtericonfilterlabel-task-filters">
+                            <!--icon and filterlabel-->
+                            <div class="filtericon-filterlabel">
+                                <div class="filtericon">
+                                    <i class="bi bi-funnel-fill"></i>
+                                </div>
+                                <div class="filterlabel">
+                                    <span>Filter</span>
+                                </div>
+                            </div>
+                            <!--filter checkboxes-->
+                            <div class="task-filters " role="group" aria-label="task filters">
+                                <input type="checkbox" class="btn-check" id="workcheckbox" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="workcheckbox">Work</label>
+
+                                <input type="checkbox" class="btn-check" id="schoolcheckbox" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="schoolcheckbox">School</label>
+
+                                <input type="checkbox" class="btn-check" id="businesscheckbox" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="businesscheckbox">Business</label>
+
+                                <input type="checkbox" class="btn-check" id="personalcheckbox" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="personalcheckbox">Personal</label>
+
+                                <input type="checkbox" class="btn-check" id="overduecheckbox" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="overduecheckbox">Overdue</label>
+
+                            </div>
+                        </div>
+                        <!--tab contents for two tabs. Each contain tables-->
+                        <div class="tab-content" id="pills-tabContent">
+
+                            <div class="tab-pane fade show active" id="pills-todo" role="tabpanel"
+                                aria-labelledby="pills-todo-tab">
+                                <div class="taskitem">
+                                    <div class="todotasks-section">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade show" id="pills-completed" role="tabpanel"
+                                aria-labelledby="pills-completed-tab">
+                                <div class="taskitem">
+
+                                    <div class="completedtasks-section">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row createtaskbutton">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="modal"
+                                data-bs-target="#createtaskModalOnTaskpage">
+                                <i class="fa fa-plus" aria-hidden="true"></i> Create Task
+                            </button>
+
+                            <!--Modal box creating task-->
+                            <div class="modal fade taskmodal" id="createtaskModalOnTaskpage" tabindex="-1"
+                                data-bs-backdrop="static" aria-labelledby="createtaskModalOnTaskpage"
+                                data-bs-keyboard="false" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <!--Modal heading-->
+                                        <div class="modal-header">
+                                            <!--heading-->
+                                            <h5 class="modal-title" id="exampleModalLabel">Create New Task</h5>
+                                            <!--close button-->
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <!--modal body-->
+                                        <div class="modal-body">
+                                            <div class="row tasktitle-startend-tasklabel">
+                                                <!--task title and start and end divs-->
+                                                <div class="col tasktitle-startend">
+                                                    <div class="row form-floating tasktitle">
+                                                        <input maxlength="50" type="text" class="form-control"
+                                                            id="taskname" placeholder="Enter your title here...">
+                                                        <label for="taskname">Enter your title here...</label>
+                                                    </div>
+                                                    <!--Start and end divs-->
+                                                    <div class="row startDate-endDate">
+                                                        <div class="col startdate-time">
+                                                            <span>Start</span>
+                                                            <input class="form-control" type="datetime-local"
+                                                                id="taskStarttimeDate" name="taskduration">
+                                                        </div>
+                                                        <div class="col enddate-time">
+                                                            <span>End</span>
+                                                            <input class="form-control" type="datetime-local"
+                                                                id="taskEndtimeDate" name="taskduration">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--label divs-->
+                                                <div class="col-3 tasklabel">
+                                                    <span class="label-heading">Label</span>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="tasklabel"
+                                                            id="work" value="Work">
+                                                        <label class="form-check-label" for="work">
+                                                            Work
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="tasklabel"
+                                                            id="business" value="Business">
+                                                        <label class="form-check-label" for="business">
+                                                            Business
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="tasklabel"
+                                                            id="personal" value="Personal">
+                                                        <label class="form-check-label" for="personal">
+                                                            Personal
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="tasklabel"
+                                                            id="school" value="School">
+                                                        <label class="form-check-label" for="school">
+                                                            School
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--description box-->
+                                            <div class="row form-floating modaltaskdescription">
+                                                <textarea maxlength="100" class="form-control"
+                                                    placeholder="Leave a comment here" id="taskdescription"></textarea>
+                                                <label for="taskdescription">Enter task description</label>
+                                            </div>
+                                        </div>
+                                        <!--save and close button-->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary closetaskmodalbutton"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary savetaskmodalbutton"
+                                                id="savenewtask">Save
+                                                changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal fade taskmodal" id="edittaskModalOnTaskpage" tabindex="-1"
+                                data-bs-backdrop="static" aria-labelledby="edittaskModalOnTaskpage"
+                                data-bs-keyboard="false" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <!--Modal heading-->
+                                        <div class="modal-header">
+                                            <!--heading-->
+                                            <h5 class="modal-title" id="exampleModalLabel">Edit New Task</h5>
+                                            <!--close button-->
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <!--modal body-->
+                                        <div class="modal-body">
+                                            <div class="row tasktitle-startend-tasklabel">
+                                                <!--task title and start and end divs-->
+                                                <div class="col tasktitle-startend">
+                                                    <div class="row form-floating tasktitle">
+                                                        <input maxlength="50" type="text" class="form-control"
+                                                            id="edittaskname" placeholder="Enter your title here...">
+                                                        <label for="taskname">Enter your title here...</label>
+                                                    </div>
+                                                    <!--Start and end divs-->
+                                                    <div class="row startDate-endDate">
+                                                        <div class="col startdate-time">
+                                                            <span>Start</span>
+                                                            <input class="form-control" type="datetime-local"
+                                                                id="edittaskStarttimeDate" name="taskduration">
+                                                        </div>
+                                                        <div class="col enddate-time">
+                                                            <span>End</span>
+                                                            <input class="form-control" type="datetime-local"
+                                                                id="edittaskEndtimeDate" name="taskduration">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--label divs-->
+                                                <div class="col-3 tasklabel">
+                                                    <span class="label-heading">Label</span>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="edittasklabel" id="work" value="Work">
+                                                        <label class="form-check-label" for="work">
+                                                            Work
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="edittasklabel" id="business" value="Business">
+                                                        <label class="form-check-label" for="business">
+                                                            Business
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="edittasklabel" id="personal" value="Personal">
+                                                        <label class="form-check-label" for="personal">
+                                                            Personal
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio"
+                                                            name="edittasklabel" id="school" value="School">
+                                                        <label class="form-check-label" for="school">
+                                                            School
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--description box-->
+                                            <div class="row form-floating modaltaskdescription">
+                                                <textarea maxlength="100" class="form-control"
+                                                    placeholder="Leave a comment here"
+                                                    id="edittaskdescription"></textarea>
+                                                <label for="taskdescription">Enter task description</label>
+                                            </div>
+                                        </div>
+                                        <!--save and close button-->
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary closetaskmodalbutton"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary savetaskmodalbutton"
+                                                id="editnewtask">Save
+                                                changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="modal fade expandtaskmodal" id="expand-task-modal" tabindex="-1"
+                            aria-labelledby="expandtaskmodal" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-lg ">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="expandtaskheading">Task title</h5>
+                                        <div class="expand-modal-buttons">
+                                            <button
+                                                class="btn btn-primary  bi bi-pencil-fill task-edit-button"></button>
+                                            <button
+                                                class="btn btn-primary bi bi-trash3-fill task-delete-button"></button>
+                                            <button
+                                                class="btn btn-primary bi bi-check-circle-fill task-mark-complete-button"></button>
+
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                    </div>
+                                    <div class="modal-body exdescription-exduration-exlabelstatus-countdown">
+                                        <div class="exdescription"> is simply dummy text of the printing and typesetting
+                                            industry. Lorem Ipsum has been the industry's standard dummy text ever since
+                                            the 1500s, when an unknown</div>
+                                        <div class="exduration">14th May - 20th May </div>
+                                        <div class="exlabel-status">
+                                            <div class="exlabel">
+                                                <strong>LABEL: </strong>
+                                                <div class="labelbadge"></div>
+                                                Work
+                                            </div>
+
+                                            <div class="exstatus">
+                                                <strong>STATUS: </strong>
+                                                ONTIME
+                                            </div>
+                                        </div>
+                                        <div class="toendcountdown">
+                                            <span class="toend">To end: </span>
+                                            <span class="count"> 00:00</span>
+                                        </div>
+
+                                    </div>
+                                    <!-- <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Accessibility modal -->
+    <div class="modal fade settingsModal" id="viewAccessibilitysmodal" data-bs-backdrop="static" data-bs-keyboard="true"
+        tabindex="-1" aria-labelledby="settings Modal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="settingsModalLabel">Settings</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body darkmode-fontsize">
+                    <div class="darkmode">
+                        <div class="theme-container d-flex justify-content-between align-items-center">
+                            <div class="theme-text-container">
+                                <span class="theme-text fs-normal fw-normal text-dark">
+                                    Select theme
+                                </span>
+                            </div>
+                            <div class="theme-switch-box">
+                                <div class="theme-swtich-container">
+                                    <label class="switch">
+
+                                        <input type="checkbox" id="toggleThemeSwitch">
+
+                                        <span class="slider round"></span>
+                                        <span class="uncheked-txt">
+                                            Light
+                                        </span>
+                                        <span class="checked-txt">
+                                            Dark
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fontsize">
+                        <span>Change Fontsize</span>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-primary" id="increase-plugin-ac">A +</button>
+                            <button type="button" class="btn btn-primary" id="normal-plugin-ac">A</button>
+                            <button type="button" class="btn btn-primary" id="decrease-plugin-ac">A -</button>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" id="accessibilitychangeButton">Save
+                            changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!--Javascript-->
+    <script src="js/accessibility.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
